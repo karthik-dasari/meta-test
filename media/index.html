@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en-US">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media &#8211; Harvard FAS CAMLab</title>
+    <link rel='stylesheet' id='gt-css-swiper-css' href='../wp-content/plugins/gt_css_js/swiper/swiper-bundle.min5d50.css?ver=8.3.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='gt-common-css' href='../wp-content/plugins/gt_css_js/css/gt_common4162.css?ver=0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='gt-css-css' href='../wp-content/plugins/gt_css_js/css/gt_css4162.css?ver=0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='gt-res-css' href='../wp-content/plugins/gt_css_js/css/gt_res4162.css?ver=0.16' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.mina7a0.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/gt_css_js/swiper/swiper-bundle.min5d50.js?ver=8.3.2' id='gt-js-swiper-js'></script>
+
+</head>
+
+<body data-rsssl=1 class="page-template-default page page-id-42 wpb-js-composer js-comp-ver-6.7.0 vc_responsive">
+        <div id="page" class="site">
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main"><style>
+    .site-footer {
+        display: none;
+    }
+
+    .site_nav {
+        background-color: transparent;
+    }
+
+    .media_box .box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .dot_box .single_dot {
+        position: absolute;
+        z-index: 1000;
+        margin-top: -3vw;
+        transition: all 0.5s ease-in-out;
+        margin-left: -1vw;
+        transform: translateX(-100%);
+    }
+
+    .media_box .box {
+        position: absolute;
+    }
+
+    .swiper {
+        padding-top: 3vw;
+    }
+
+    .swiper-slide .tag .text {
+        transition: all 0.5s ease-in-out;
+    }
+
+    .swiper-slide.active .tag .text {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title_box {
+        opacity: 0;
+        max-height: 0;
+        transition-property: max-height, opacity;
+        overflow: hidden;
+    }
+
+    .swiper-slide.active .title_box {
+        opacity: 1;
+        max-height: 100vh;
+        transition: all 0.5s ease-in-out;
+        transition-property: max-height, opacity;
+        transition-duration: 0s, 0.5s;
+        transition-delay: 0s, 0.5s;
+    }
+
+    .move_text {
+        position: absolute;
+        z-index: 1000;
+        transition: transform 0.5s ease-in-out;
+        transition-property: transform;
+        text-align: center;
+        opacity: 1;
+        white-space: nowrap;
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+
+    .media_box .box .tag_swiper .container.slide0 {
+        margin-left: 2vw;
+    }
+
+    .media_box .box .tag_swiper .container.slide0 .pos_box {
+        padding-left: 0;
+    }
+
+    .media_box .box .tag_swiper .container.slide0 .title_box {
+        left: 0;
+        right: auto;
+        transform: translateX(0);
+        text-align: left;
+    }
+
+    .media_box .box .tag_swiper .swiper-slide.container:last-of-type .pos_box {
+        padding-right: 0;
+    }
+
+    .media_box .box .tag_swiper .swiper-slide.container:last-of-type .title_box {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+        text-align: right;
+    }
+
+    @media (max-width: 700px) {
+        .dot_box .single_dot {
+            width: 3vw;
+            height: 3vw;
+
+            margin-left: -1.5vw;
+            margin-top: -8vw;
+        }
+
+        .swiper {
+            padding-top: 8vw;
+        }
+    }
+</style>
+<script>
+    var index = 1;
+
+    function resize() {
+
+        if (jQuery('.swiper-slide').length > 0) {
+
+            var left = jQuery('.swiper-slide').eq(index).offset().left - jQuery('.swiper-wrapper').offset().left;
+            var width = jQuery('.swiper-slide').eq(index).width();
+
+            jQuery('.swiper-slide').removeClass('active');
+            jQuery('.swiper-slide').eq(index).addClass('active');
+            //console.log(jQuery('.swiper-wrapper').offset().left, jQuery('.swiper-slide').eq(index).offset().left);
+
+            if (index == 0) {
+                left = jQuery(window).width() * 0.02;
+                width = jQuery(window).width() * 0.02;
+            }
+
+            if (index == jQuery('.swiper-slide').length - 1) {
+                left = left + jQuery('.swiper-slide').eq(index).width() / 2 - jQuery('.single_dot').width() / 2;
+            }
+
+            jQuery('.single_dot').css("transform", "translate3d(" + (left + width / 2) + "px, 0, 0)");
+
+            //move_text
+            jQuery('.move_text').css('display', "block");
+            jQuery('.move_text').css('opacity', 1);
+
+            var html = jQuery('.swiper-slide').eq(index).find('.title_box').html();
+            var top = jQuery('.swiper-slide').eq(index).find('.title_box').offset().top -
+                jQuery('.swiper-wrapper').offset().top;
+
+            offset = jQuery('.move_text').width() / 2 - jQuery('.swiper-slide').eq(index).width() / 2;
+            jQuery('.move_text').css('transform', "translate3d(" + (left - offset) + "px, 0, 0)");
+
+            jQuery('.move_text').css('top', top + "px");
+            //jQuery('.move_text').css('opacity', 0);
+
+            jQuery('.move_text').animate({
+                opacity: 0
+            }, 400, function() {
+                // jQuery('.move_text').css('display', "none");
+                var html = jQuery('.swiper-slide').eq(index).find('.title_box').html();
+                jQuery('.move_text').html(html);
+
+                jQuery('.move_text').css('display', "none");
+
+            });
+
+        }
+
+    }
+
+    jQuery(window).on('resize', function() {
+        resize();
+    });
+
+    jQuery(document).ready(function() {
+
+        var move_text = document.querySelector('.move_text');
+        move_text.addEventListener('transitionend', (event) => {
+            //console.log(event);
+            //var html = jQuery('.swiper-slide').eq(index).find('.title_box').html();
+            //jQuery('.move_text').html(html);
+
+        });
+
+
+
+
+        jQuery(window).load(function() {
+            resize()
+        });
+
+
+
+        jQuery(".home_menu").addClass("show");
+        jQuery(".home_menu_mob").addClass("show");
+
+        var tag_swiper = new Swiper('.tag_swiper', {
+            slidesPerView: "auto",
+            freeMode: {
+                enabled: true,
+                sticky: true,
+            },
+            mousewheel: true,
+            //slideToClickedSlide: true,
+            //centeredSlides: true,
+
+            //slideActiveClass: 'active',
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    centeredSlides: true,
+                    freeMode: {
+                        enabled: false
+                    },
+                    // loop: true,
+                    slideToClickedSlide: true,
+                },
+
+                700: {
+                    centeredSlides: false,
+                    freeMode: {
+                        enabled: true,
+                    },
+                    loop: false,
+                    slideToClickedSlide: false,
+                },
+            },
+            //loop: true,
+            // spaceBetween: '3.2%',
+            on: {
+                slideChange: function() {
+                    var activeIndex = this.activeIndex;
+
+                    if (jQuery(window).width() < 700) {
+                        index = activeIndex;
+                        resize();
+                    }
+
+                },
+                click: function(swiper, event) {
+                    // console.log(swiper);
+                    // swiper.clickedSlide
+
+                    if (index == swiper.clickedIndex) {
+                        return;
+                    }
+
+                    index = swiper.clickedIndex;
+
+                    resize();
+                    //jQuery( '.swiper-slide' ).index( '' )
+                },
+
+                afterInit: function(swiper) {
+                    swiper.slideTo(3);
+
+                }
+            },
+
+
+        });
+
+        resize();
+
+    });
+</script>
+    <div class="media_box">
+        <div class="img back_image" style="background-image:url(../wp-content/uploads/2022/10/media.jpg)"></div>
+
+        <div class="box">
+            <div class="swiper tag_swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="dot_box">
+                        <div class="single_dot"></div>
+                    </div>
+
+                    <div class="move_text">
+                    </div>
+
+                                            <div class="swiper-slide container slide0" data-index="0">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Immersive Theater</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/shadow-cave/index.html">
+                                            <div class="title font_28 whitee8">Shadow Cave</div>
+                                        </a>
+                                        <a href="../project/mindscape/index.html">
+                                            <div class="title font_28 whitee8">Mindscape</div>
+                                        </a>
+                                        <a href="../project/indras-net/index.html">
+                                            <div class="title font_28 whitee8">Indra’s Net</div>
+                                        </a>
+                                        <a href="../project/illusory-courtyard/index.html">
+                                            <div class="title font_28 whitee8">Illusory Courtyard</div>
+                                        </a>
+                                        <a href="../project/china-builders/index.html">
+                                            <div class="title font_28 whitee8">China Builders</div>
+                                        </a>
+                                        <a href="../project/digital-temple/index.html">
+                                            <div class="title font_28 whitee8">Digital Temple</div>
+                                        </a>
+                                        <a href="../project/embodied-architecture/index.html">
+                                            <div class="title font_28 whitee8">Embodied Architecture</div>
+                                        </a>
+                                        <a href="../project/cave-dance/index.html">
+                                            <div class="title font_28 whitee8">Cave Dance</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide container slide1" data-index="1">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Online Universe</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/digital-luoyang/index.html">
+                                            <div class="title font_28 whitee8">Digital Luoyang</div>
+                                        </a>
+                                        <a href="../project/digital-gandhara/index.html">
+                                            <div class="title font_28 whitee8">Digital Gandhara</div>
+                                        </a>
+                                        <a href="../project/china-builders/index.html">
+                                            <div class="title font_28 whitee8">China Builders</div>
+                                        </a>
+                                        <a href="../project/digital-temple/index.html">
+                                            <div class="title font_28 whitee8">Digital Temple</div>
+                                        </a>
+                                        <a href="../project/cave-dance/index.html">
+                                            <div class="title font_28 whitee8">Cave Dance</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide container slide2" data-index="2">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Art Film</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/study-of-laughter/index.html">
+                                            <div class="title font_28 whitee8">Study of Laughter</div>
+                                        </a>
+                                        <a href="../project/fire-dream/index.html">
+                                            <div class="title font_28 whitee8">Fire Dream</div>
+                                        </a>
+                                        <a href="../project/to-the-moon/index.html">
+                                            <div class="title font_28 whitee8">To the Moon</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide container slide3" data-index="3">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Educational Game</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/romance-of-the-western-chamber/index.html">
+                                            <div class="title font_28 whitee8">Romance of the Western Chamber</div>
+                                        </a>
+                                        <a href="../project/digital-luoyang/index.html">
+                                            <div class="title font_28 whitee8">Digital Luoyang</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide container slide4" data-index="4">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Installation</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/the-art-of-life-mawangdui-han-tombs/index.html">
+                                            <div class="title font_28 whitee8">The Art of Life: Mawangdui Han Tombs</div>
+                                        </a>
+                                        <a href="../project/study-of-laughter/index.html">
+                                            <div class="title font_28 whitee8">Study of Laughter</div>
+                                        </a>
+                                        <a href="../project/shadow-cave/index.html">
+                                            <div class="title font_28 whitee8">Shadow Cave</div>
+                                        </a>
+                                        <a href="../project/peony-pavilion/index.html">
+                                            <div class="title font_28 whitee8">Peony Pavilion</div>
+                                        </a>
+                                        <a href="../project/luoyang-soundscape/index.html">
+                                            <div class="title font_28 whitee8">Luoyang Soundscape</div>
+                                        </a>
+                                        <a href="../project/fire-dream/index.html">
+                                            <div class="title font_28 whitee8">Fire Dream</div>
+                                        </a>
+                                        <a href="../project/digital-temple/index.html">
+                                            <div class="title font_28 whitee8">Digital Temple</div>
+                                        </a>
+                                        <a href="../project/embodied-architecture/index.html">
+                                            <div class="title font_28 whitee8">Embodied Architecture</div>
+                                        </a>
+                                        <a href="../project/cave-dance/index.html">
+                                            <div class="title font_28 whitee8">Cave Dance</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                                            <div class="swiper-slide container slide5" data-index="5">
+
+                            <div class="pos_box border_topd9">
+                                <div class="tag whitee8 font_16 lineheight20 ">
+                                    <div class="text">Publication</div>
+                                </div>
+                                <div class="title_box">
+                                    
+                                        <a href="../project/fire-dream/index.html">
+                                            <div class="title font_28 whitee8">Fire Dream</div>
+                                        </a>
+                                        <a href="../project/to-the-moon/index.html">
+                                            <div class="title font_28 whitee8">To the Moon</div>
+                                        </a>
+                                        <a href="../project/digital-temple/index.html">
+                                            <div class="title font_28 whitee8">Digital Temple</div>
+                                        </a>
+                                        <a href="../project/embodied-architecture/index.html">
+                                            <div class="title font_28 whitee8">Embodied Architecture</div>
+                                        </a>                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        @media (max-width: 700px) {
+            .home_menu {
+                display: none;
+            }
+        }
+
+        .home_menu_mob {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            text-transform: uppercase;
+            transform: translateY(100%);
+        }
+
+        .home_menu_mob.mob_show.show {
+            transform: translateY(0);
+        }
+
+        .home_menu_mob .swiper {
+            padding-top: 0;
+        }
+
+        .home_menu_mob .swiper-slide {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .home_menu_mob .swiper-button-prev {
+
+            width: 10vw;
+        }
+
+        .home_menu_mob .swiper-button-prev::after {
+            border: 1px solid #e8e8e8;
+            width: 2vw;
+            height: 2vw;
+            transform: rotate(45deg);
+            border-right: none;
+            border-top: none;
+        }
+
+        .home_menu_mob .swiper-button-next {
+            width: 10vw;
+        }
+
+        .home_menu_mob .swiper-button-next::after {
+            border: 1px solid #e8e8e8;
+            width: 2vw;
+            height: 2vw;
+            transform: rotate(45deg);
+
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .button_up {
+            display: none;
+        }
+
+        .highlight_main {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            transform: translateX(100vw);
+            position: fixed;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .highlight_main.show {
+            transform: translateX(0vw);
+        }
+    </style>
+    
+    <div class="home_menu">
+        <div class="bottom_menu font_14 whiteb2"> <a 
+        class="item active"  
+        id="bottom_menu_media"
+        href="index.html">MEDIA</a> <a 
+        class="item "  
+        id="bottom_menu_highlight"
+        href="../highlight/index.html">Highlight</a> <a 
+        class="item "  
+        id="bottom_menu_index"
+        href="../project-index/index.html">Index</a>    
+        </div>
+    </div>
+        <script>
+        var mob_bottom_menu_clicked = false;
+
+        var uniqid = '638cb07b6cf17';
+        var index = 0;
+if (window.location.href == "../highlight/index.html") {
+
+            index = 4;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_timeline').addClass('active');
+        } else {
+            index = 0;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_theme').addClass('active');
+        }
+        jQuery(function() {
+            jQuery('.swiper-button-prev638cb07b6cf17').click(function() {
+                mob_bottom_menu_clicked = true;
+            });
+            jQuery('.swiper-button-next638cb07b6cf17').click(function() {
+                mob_bottom_menu_clicked = true;
+            });
+            const home_menu_mob_swiper = new Swiper('.swiper' + uniqid, {
+                // Optional parameters
+                slidesPerView: 1,
+                loop: true,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next' + uniqid,
+                    prevEl: '.swiper-button-prev' + uniqid,
+                },
+                on: {
+                    init: function(swiper) {
+                        swiper.slideToLoop(index);
+                    },
+                    activeIndexChange: function(swiper) {
+                        var activeIndex = swiper.activeIndex;
+                        var activeslide = jQuery(swiper.slides).eq(activeIndex);
+                        var href = jQuery(activeslide).children("a").attr("href");
+                        if (href != undefined) {
+                            if (window.location.href != href && mob_bottom_menu_clicked) {
+                                window.location = href;
+                            }
+                        }
+                    }
+                },
+
+            });
+
+        });
+    </script>
+
+    <div class="home_menu_mob mob_show">
+        <div class="swiper swiper638cb07b6cf17">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="index.html">
+                            MEDIA</a>
+                    </div>
+                                    <div class="swiper-slide"><a href="../highlight/index.html">
+                            Highlight</a>
+                    </div>
+                                    <div class="swiper-slide"><a href="../project-index/index.html">
+                            Index</a>
+                    </div>
+                            </div>
+            <div class="swiper-button-prev swiper-button-prev638cb07b6cf17"></div>
+            <div class="swiper-button-next swiper-button-next638cb07b6cf17"></div>
+        </div>
+    </div>
+    <div class="highlight_main"></div>
+
+</main><!-- #main -->
+</div><!-- #primary -->
+</div><!-- #content -->
+
+</div><!-- #page -->
+
+
+</body>
+
+</html>

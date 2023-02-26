@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "BentonSans";
+  src: url("fonts/BentonSansBook.eot");
+  src: url("fonts/BentonSansBook.eot") format("embedded-opentype"),
+    url("fonts/BentonSansBook.woff2") format("woff2"),
+    url("fonts/BentonSansBook.woff") format("woff"),
+    url("fonts/BentonSansBook.ttf") format("truetype"),
+    url("fonts/BentonSansBook.svg#BentonSansBook") format("svg");
+
+  font-weight: bold;
+  font-style: normal;
+}

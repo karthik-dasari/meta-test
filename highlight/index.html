@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Highlight &#8211; Harvard FAS CAMLab</title>
+
+<link rel='stylesheet' id='gt-css-swiper-css' href='../wp-content/plugins/gt_css_js/swiper/swiper-bundle.min5d50.css?ver=8.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gt-common-css' href='../wp-content/plugins/gt_css_js/css/gt_common4162.css?ver=0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='gt-css-css' href='../wp-content/plugins/gt_css_js/css/gt_css4162.css?ver=0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='gt-res-css' href='../wp-content/plugins/gt_css_js/css/gt_res4162.css?ver=0.16' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.mina7a0.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/gt_css_js/swiper/swiper-bundle.min5d50.js?ver=8.3.2' id='gt-js-swiper-js'></script>
+
+</head>
+
+<body data-rsssl=1 class="page-template-default page page-id-44 wpb-js-composer js-comp-ver-6.7.0 vc_responsive">
+        <div id="page" class="site">
+
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <style>
+    body {
+        background-color: #0D0D0D;
+        overflow: hidden;
+    }
+
+    .site-footer {
+        display: none;
+    }
+
+    .site_nav {
+        background-color: transparent;
+    }
+
+    .box {
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    .text_box {
+        width: 25vw;
+        top: 50%;
+        transform: translateY(200vw);
+        left: 0%;
+        z-index: 100;
+        display: block;
+        position: absolute;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .text_box.show {
+        display: block;
+        transform: translateY(-50%);
+    }
+
+    .close {
+        width: 1.35rem;
+        height: 1.35rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        cursor: pointer;
+        right: 2.6rem;
+    }
+
+    .text_list {
+        height: 80vh;
+        width: 40vw;
+        left: 60%;
+        top: 50%;
+        position: fixed;
+        transform: translateY(-50%) translateX(100vw);
+        z-index: 100;
+        transition: all 0.8s ease-in-out;
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-delay: 0s, 0s;
+    }
+
+    .text_list.show {
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
+        transition-property: transform, opacity;
+        transition-delay: 0s, 0.5s;
+    }
+
+    .site-main {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .site-main>.back_image {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 0;
+        background-attachment: fixed;
+
+    }
+
+    .site-main>.back_image.show {
+        opacity: 1;
+    }
+
+    .site-main>.back_image img {
+        display: none;
+    }
+
+
+    .highlight_box {
+        overflow: hidden;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.5s ease-in-out;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .highlight_box.show {
+        transform: scale(1.05);
+    }
+
+    .highlight_box .box {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: auto;
+        border-radius: 50%;
+
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .highlight_box .related_img {
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 0;
+    }
+
+    .highlight_box .box,
+    .highlight_box .related_img,
+    .left_box::before {
+        height: 60vh;
+        width: 60vh;
+    }
+
+    .left_box {
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        margin: 3vh;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .left_box::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+        border-radius: 50%;
+        opacity: 1;
+    }
+
+    .highlight_box .box .item .left_box .title {
+        z-index: 10;
+    }
+
+    .link {
+        margin-top: 2rem;
+    }
+
+    .site-main {
+        position: relative;
+    }
+
+    @media (max-width: 700px) {
+
+        .site-main>.back_image {
+            background-image: none;
+        }
+
+        .site-main>.back_image img {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .highlight_box .box,
+        .highlight_box .related_img,
+        .left_box::before {
+            width: 110vw;
+            height: 110vw;
+        }
+
+        .highlight_box .box .item .left_box .title {
+            left: 25vw;
+            top: 20%
+        }
+
+        .text_list {
+            width: 100%;
+            left: 0;
+            top: 4.2rem;
+            bottom: 0;
+            height: 90vh;
+            overflow: hidden;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            z-index: 100;
+            box-sizing: border-box;
+            transform: translateY(0%) translateX(100%);
+        }
+
+        .text_list.show {
+            transform: translateY(0%) translateX(0%);
+        }
+
+        .text_box {
+            width: 100%;
+            position: absolute;
+            transform: translateX(100vw);
+            top: auto;
+            bottom: 12vh;
+            box-sizing: border-box;
+            padding-left: 20vw;
+            padding-right: 6vw;
+        }
+
+        .text_box.show {
+            transform: translateY(0) translateX(0%);
+        }
+
+        .text_list.show .close {
+            opacity: 1;
+        }
+
+        .close {
+            right: 0.8rem;
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+    }
+</style>
+<script>
+    function resize() {
+
+        jQuery('.box .item').each(function(index, element) {
+
+            jQuery('.text_box').removeClass("show");
+            jQuery('.text_list').removeClass("show");
+
+            var len = 5; // jQuery('.box .item').length;
+            var scale = (len - index) / len;
+            var mX = (jQuery(window).width() * ((1 - scale) * 0.6) - jQuery(window).width() * 0.3) + 'px';
+            var mY = "-50%";
+
+            jQuery(element).parent().css('z-index', (len - index));
+
+            if (jQuery(window).width() < 700) {
+                mX = "-50%";
+                mY = (jQuery(window).height() * ((1 - scale) * 0.6) - jQuery(window).height() * 0.4) + "px";
+            }
+
+            jQuery(element).parent().css('transform',
+                " translateY(" + mY + ") " +
+                " translateX( " + mX + " ) " +
+                " scale( " + scale + " )");
+
+            var grayscale = 100;
+            var contrast = 100 * (len - index) / len;
+
+            if (index == 0) {
+                grayscale = 0;
+                contrast = 100;
+            }
+
+            jQuery(element).children('.left_box').css('filter',
+                " contrast( " + (contrast) + "%)" +
+                " grayscale( " + (grayscale) + "%) " + " blur( " + (index * 3.5) + "px)");
+
+            if (index >= 4) {
+                jQuery(element).parent().css('opacity', 0);
+            } else {
+                jQuery(element).parent().css('opacity', 1);
+            }
+
+        });
+
+    }
+
+    var timer = 0;
+
+    //滚轮
+    function moveWheel(param) {
+        window.clearTimeout(timer);
+        if (param.deltaY < 0) {
+            //往下滚动
+            timer = window.setTimeout(function() {
+                jQuery('.box').eq(1).click();
+            }, 50);
+
+        } else {
+            //往上滚动
+            timer = window.setTimeout(function() {
+
+                jQuery('.highlight_box .box').eq(jQuery('.highlight_box .box').length - 1).css('z-index', "10");
+
+                var mX = "-120%";
+                var mY = "-50%";
+
+                if (jQuery(window).width() < 700) {
+                    mX = "-50%";
+                    mY = "-120%";
+                }
+
+                jQuery('.highlight_box .box').eq(jQuery('.highlight_box .box').length - 1).css('transform',
+                    "translateY(" + mY + ") translateX(" + mX + ") scale(1.1)");
+                //opacity: 1
+                jQuery('.highlight_box .box').eq(jQuery('.highlight_box .box').length - 1).css('opacity', 0);
+
+                jQuery('.highlight_box .box').eq(
+                        jQuery('.highlight_box .box').length - 1)
+                    .insertBefore(jQuery('.highlight_box .box').eq(0));
+
+                jQuery(jQuery('.highlight_box .box').eq(0)).animate({
+                    opacity: 1
+                }, 500, function() {
+                    resize();
+                })
+
+            }, 50);
+
+        }
+    }
+
+
+    jQuery(document).ready(function() {
+
+        jQuery('.close').click(function() {
+
+            jQuery('.text_box').removeClass("show");
+            jQuery('.text_list').removeClass("show");
+            jQuery('.highlight_box').removeClass("show");
+
+            jQuery('.box').each(function(the_index, element) {
+
+                if (the_index < 4) {
+                    jQuery(element).css('opacity', 1);
+                }
+                //show text
+            });
+
+        });
+
+        document.addEventListener('wheel', moveWheel, false);
+
+        jQuery(".home_menu").addClass("show");
+        jQuery(".home_menu_mob").addClass("show");
+
+        jQuery('.box').click(function() {
+
+            if (jQuery('.text_box.show').length > 0) {
+                return false;
+            }
+
+            var index = jQuery('.box').index(this);
+
+            //第一个
+            if (index == 0) {
+                //console.log(index);
+                jQuery('.box').each(function(the_index, element) {
+
+                    if (the_index != 0) {
+                        jQuery(element).css('opacity', 0);
+                    }
+                    //show text
+                });
+
+                jQuery('.text_list').addClass("show");
+                jQuery('.text_box[data-id=' + jQuery(this).data('id') + ']').addClass("show");
+                jQuery('.highlight_box').addClass("show");
+
+                //jQuery('.highlight_box .box').eq(0)
+
+            } else {
+
+                jQuery('.highlight_box .box').eq(0).css('opacity', 0);
+
+                window.setTimeout(function() {
+
+                    jQuery('.highlight_box').append(
+                        jQuery('.highlight_box .box').eq(0)
+                    );
+
+                    resize();
+
+                }, 200);
+
+
+            }
+
+        });
+        resize();
+        //
+    });
+</script>
+
+<div class="img back_image" style="background-image:url(../wp-content/uploads/2022/10/highlight-1.jpg)">
+    <img src="../wp-content/uploads/2022/10/hilight_mob_bg.jpg" />
+</div>
+<div class="highlight_box">
+
+                <div class="box" id="636" data-id="636" data-index="0">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image_-c0-copy.jpg)"></div>
+                        <div class="title whiteff">Cave Dance</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="608" data-id="608" data-index="1">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/EA-horizontal-4.jpg)"></div>
+                        <div class="title whiteff">Embodied Architecture</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="538" data-id="538" data-index="2">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image2_-6-18x24-DT-1.jpg)"></div>
+                        <div class="title whiteff">Digital Temple</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="643" data-id="643" data-index="3">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image1-4.jpg)"></div>
+                        <div class="title whiteff">China Builders</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="539" data-id="539" data-index="4">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image-1-e1665849790550.jpg)"></div>
+                        <div class="title whiteff">To the Moon</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="622" data-id="622" data-index="5">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image1-3.jpg)"></div>
+                        <div class="title whiteff">Digital Gandhara</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="649" data-id="649" data-index="6">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/cover-image1-2.jpg)"></div>
+                        <div class="title whiteff">Luoyang Soundscape</div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="box" id="515" data-id="515" data-index="7">
+                <div class="item">
+                    <div class="left_box">
+                        <div class="related_img back_image" style="background-image:url(../wp-content/uploads/2022/09/sc7.jpg)"></div>
+                        <div class="title whiteff">Shadow Cave</div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+<div class="text_list">
+    <div class="close" style="background-image:url(../wp-content/plugins/gt_css_js/img/close.svg)"></div>
+            <div class="text_box" data-id="636">
+            <div class="highlight_text whiteff font_14"><p>Based upon multi-year interdisciplinary research on the Buddhist culture of dance in Dunhuang, the Cave Dance project harnesses the power of machine learning to bring new insights into the ancient dance forms.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/cave-dance/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="608">
+            <div class="highlight_text whiteff font_14"><p>Embodied Architecture pursues a new way of telling the master narrative of Chinese architectural history. The project centers upon a question: what is the logic and language of design that fundamentally informs Chinese architecture?</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/embodied-architecture/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="538">
+            <div class="highlight_text whiteff font_14"><p>Mining the intersections of humanistic research and new media technology, CAMLab explores a series of Buddhist temples as case studies that unveil the deeper logic of image making and spatial narratives in Chinese art and architecture.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/digital-temple/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="643">
+            <div class="highlight_text whiteff font_14"><p>China Builders transforms the extraordinary careers of pioneering architects into multimedia experiences, inviting contemporary audiences to rethink the history, education, and practice of architecture in modern China.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/china-builders/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="539">
+            <div class="highlight_text whiteff font_14"><p>The art film <em>To the Moon</em> reinterprets the artistic and cognitive journey of Liu Kuo-sung. Enriched by historical footage and experimenting with visual design, the film traces the arc of Liu’s ambulatory life, moving from his birthplace in Anhui, throughout war-torn mainland China, and eventually across the strait to Taiwan.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/to-the-moon/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="622">
+            <div class="highlight_text whiteff font_14"><p>Digital Gandhara aims to preserve fast-disappearing Buddhist art and architecture by combining a global research effort with cutting-edge digital technologies.</p>
+<p>Through 3D scanning, digital modeling, data visualization, machine learning, and multimedia storytelling, this project creates an immersive online environment that allows scholars and the general public to virtually experience the Buddhist sites of Gandhara.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/digital-gandhara/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="649">
+            <div class="highlight_text whiteff font_14"><p>As a sister project to Digital Luoyang, Luoyang Soundscape explores the acoustic fabric of the ancient cosmopolis, Luoyang—the world&#8217;s largest city during the sixth century.</p>
+<p>Using historical documents and archeological findings, the team examined the soundscape of daily life across Luoyang’s different zones—from the acoustic jubilance of urban festivals to the cacophonies of war and urban disasters.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/luoyang-soundscape/index.html">Enter</a></div>
+
+        </div>
+            <div class="text_box" data-id="515">
+            <div class="highlight_text whiteff font_14"><p><em>Shadow Cave</em> addresses a foundational myth of Buddhist art originating around the year 400 CE in the region of Nagarahāra (in present-day Afghanistan), part of the kingdom of Gandhāra. There the Buddha is said to have leaped into the wall of a cliffside grotto, imprinting on it a “shadow image” that was radiantly reflective like a mirror when seen from afar but disappeared into the rocky surface upon approach.</p>
+</div>
+            <div class="whited9 font_14 link"><a class="" href="../project/shadow-cave/index.html">Enter</a></div>
+
+        </div>
+    </div>
+    <style>
+        @media (max-width: 700px) {
+            .home_menu {
+                display: none;
+            }
+        }
+
+        .home_menu_mob {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            text-transform: uppercase;
+            transform: translateY(100%);
+        }
+
+        .home_menu_mob.mob_show.show {
+            transform: translateY(0);
+        }
+
+        .home_menu_mob .swiper {
+            padding-top: 0;
+        }
+
+        .home_menu_mob .swiper-slide {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .home_menu_mob .swiper-button-prev {
+
+            width: 10vw;
+        }
+
+        .home_menu_mob .swiper-button-prev::after {
+            border: 1px solid #e8e8e8;
+            width: 2vw;
+            height: 2vw;
+            transform: rotate(45deg);
+            border-right: none;
+            border-top: none;
+        }
+
+        .home_menu_mob .swiper-button-next {
+            width: 10vw;
+        }
+
+        .home_menu_mob .swiper-button-next::after {
+            border: 1px solid #e8e8e8;
+            width: 2vw;
+            height: 2vw;
+            transform: rotate(45deg);
+
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .button_up {
+            display: none;
+        }
+
+        .highlight_main {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            transform: translateX(100vw);
+            position: fixed;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .highlight_main.show {
+            transform: translateX(0vw);
+        }
+    </style>
+    
+    <div class="home_menu">
+        <div class="bottom_menu font_14 whiteb2"> <a 
+        class="item "  
+        id="bottom_menu_media"
+        href="../media/index.html">MEDIA</a> <a 
+        class="item active"  
+        id="bottom_menu_highlight"
+        href="index.html">Highlight</a> <a 
+        class="item "  
+        id="bottom_menu_index"
+        href="../project-index/index.html">Index</a>    
+        </div>
+    </div>
+        <script>
+        var mob_bottom_menu_clicked = false;
+
+
+        var uniqid = '638cb07bc1248';
+        var index = 0;
+
+        if (window.location.hash == "#space") {
+            index = 1;
+
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_space').addClass('active');
+
+        } else if (window.location.hash == "#timeline") {
+
+            index = 2;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_timeline').addClass('active');
+        } else
+
+        if (window.location.href == "../media/index.html") {
+
+            index = 3;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_timeline').addClass('active');
+        } else
+
+        if (window.location.href == "index.html") {
+
+            index = 4;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_timeline').addClass('active');
+        } else {
+            index = 0;
+            jQuery('.bottom_menu .item').removeClass('active');
+            jQuery('#bottom_menu_theme').addClass('active');
+        }
+
+        jQuery(function() {
+
+            jQuery('.swiper-button-prev638cb07bc1248').click(function() {
+                mob_bottom_menu_clicked = true;
+            });
+            jQuery('.swiper-button-next638cb07bc1248').click(function() {
+                mob_bottom_menu_clicked = true;
+            });
+
+
+            const home_menu_mob_swiper = new Swiper('.swiper' + uniqid, {
+                // Optional parameters
+                slidesPerView: 1,
+                loop: true,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next' + uniqid,
+                    prevEl: '.swiper-button-prev' + uniqid,
+                },
+
+                on: {
+                    init: function(swiper) {
+                        swiper.slideToLoop(index);
+                    },
+
+                    activeIndexChange: function(swiper) {
+
+                        var activeIndex = swiper.activeIndex;
+                        var activeslide = jQuery(swiper.slides).eq(activeIndex);
+
+                        //window.location = href;
+                        var href = jQuery(activeslide).children("a").attr("href");
+
+                        if (href != undefined) {
+                            //console.log(href);
+                            if (window.location.href != href && mob_bottom_menu_clicked) {
+
+                                //console.log(href);
+
+                                window.location = href;
+                            }
+                        }
+                    }
+                },
+
+            });
+
+        });
+    </script>
+
+    <div class="home_menu_mob mob_show">
+        <div class="swiper swiper638cb07bc1248">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="../media/index.html">
+                            MEDIA</a>
+                    </div>
+                                    <div class="swiper-slide"><a href="index.html">
+                            Highlight</a>
+                    </div>
+                                    <div class="swiper-slide"><a href="../project-index/index.html">
+                            Index</a>
+                    </div>
+                            </div>
+            <div class="swiper-button-prev swiper-button-prev638cb07bc1248"></div>
+            <div class="swiper-button-next swiper-button-next638cb07bc1248"></div>
+        </div>
+    </div>
+    <div class="highlight_main"></div>
+
+</main><!-- #main -->
+</div><!-- #primary -->
+</div><!-- #content -->
+
+
+
+</div><!-- #page -->
+
+
+
+</body>
+
+</html>
